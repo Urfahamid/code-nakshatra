@@ -1,0 +1,324 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy New Year ✨</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+  min-height:100vh;
+  background: radial-gradient(circle at top, #000 30%, #1a001a 60%, #330000);
+  font-family:'Poppins',sans-serif;
+  color:#fff;
+  overflow-x: hidden;
+overflow-y: auto;
+}
+
+/* HEADER */
+header{
+  text-align:center;
+  padding:35px 20px 15px;
+}
+
+header h1{
+  font-family:'Playfair Display',serif;
+  font-size:3rem;
+  background:linear-gradient(45deg, gold, #ff4d6d, #ff9aa2);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  text-shadow:0 0 35px rgba(255,215,0,0.6);
+  animation: glow 2.5s infinite alternate;
+}
+
+@keyframes glow{
+  from{ text-shadow:0 0 20px gold; }
+  to{ text-shadow:0 0 45px #ff4d6d; }
+}
+
+/* COUNTDOWN */
+.countdown{
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  margin:20px 0 25px;
+}
+
+.box{
+  width:72px;
+  padding:12px 6px;
+  border-radius:14px;
+  background:rgba(0,0,0,0.7);
+  border:1.5px solid gold;
+  text-align:center;
+  box-shadow:0 0 18px rgba(255,215,0,0.5);
+}
+
+.box span{
+  font-size:1.4rem;
+  font-weight:600;
+  color:#ff4d6d;
+}
+
+.box p{
+  font-size:0.65rem;
+  color:#ccc;
+}
+
+/* NAME INPUT */
+.name-box{
+  display:flex;
+  justify-content:center;
+  margin-bottom:18px;
+}
+
+.name-box input{
+  width:220px;
+  padding:12px 16px;
+  border-radius:25px;
+  border:1.5px solid gold;
+  outline:none;
+  font-size:0.9rem;
+  text-align:center;
+  background:rgba(0,0,0,0.6);
+  color:#ffd6e8;
+  box-shadow:0 0 15px rgba(255,215,0,0.4);
+}
+
+.name-box input::placeholder{
+  color:#ffb3c6;
+}
+
+/* BUTTON */
+button{
+  display:block;
+  margin:0 auto;
+  padding:14px 34px;
+  border:none;
+  border-radius:30px;
+  background:linear-gradient(45deg,#ff4d6d,gold);
+  color:#000;
+  font-weight:600;
+  font-size:1rem;
+  cursor:pointer;
+  box-shadow:0 0 25px rgba(255,77,109,0.8);
+}
+
+/* MESSAGE */
+.message-section{
+  max-width:90%;
+  margin:40px auto 60px;
+  padding:25px;
+  background:rgba(255,192,203,0.12);
+  border-radius:20px;
+  box-shadow:0 0 25px rgba(255,215,0,0.4);
+  text-align:center;
+}
+
+.message{
+  display:none;
+  width:90%;
+  max-width:420px;
+  margin:28px auto;
+  background:rgba(255,255,255,0.95);
+  color:#333;
+  padding:22px;
+  border-radius:18px;
+  text-align:center;
+  animation:fadeIn 1.4s ease;
+}
+
+.message h2{
+  font-family:'Playfair Display',serif;
+  color:#ff4d6d;
+  margin-bottom:12px;
+}
+
+@keyframes fadeIn{
+  from{opacity:0;transform:translateY(20px);}
+  to{opacity:1;transform:translateY(0);}
+}
+
+/* TEDDY */
+.teddy{
+  position:absolute;
+  bottom:12px;
+  font-size:3rem;
+  animation:dance 1.6s infinite alternate;
+}
+
+.teddy.left{left:15px;}
+.teddy.right{right:15px;}
+
+@keyframes dance{
+  from{transform:rotate(-10deg) translateY(0);}
+  to{transform:rotate(10deg) translateY(-12px);}
+}
+
+/* HEARTS */
+.heart{
+  position:absolute;
+  bottom:-20px;
+  animation:floatUp 6s linear infinite;
+}
+
+@keyframes floatUp{
+  0%{opacity:0;transform:translateY(0);}
+  10%{opacity:1;}
+  100%{opacity:0;transform:translateY(-800px);}
+}
+
+/* FIREWORK */
+.firework{
+  position:absolute;
+  width:6px;
+  height:6px;
+  border-radius:50%;
+  box-shadow:0 0 20px gold;
+  animation:explode 1.2s ease-out forwards;
+}
+
+@keyframes explode{
+  from{transform:scale(0);opacity:1;}
+  to{transform:scale(6);opacity:0;}
+}
+.firework {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: gold;
+  pointer-events: none;
+  animation: boom 1.2s ease-out forwards;
+  z-index: 9999;
+}
+
+@keyframes boom {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+/* FOOTER */
+.footer{
+  text-align:center;
+  padding:15px 0 20px;
+  font-size:0.9rem;
+  color:#ffd700;
+  margin-top:20px;
+}
+
+</style>
+</head>
+
+<body>
+
+<audio id="music" loop>
+  <source src="happy-new-year-joy-458340.mp3" type="audio/mpeg">
+</audio>
+
+<header>
+  <h1>Happy New Year ✨</h1>
+</header>
+
+<div class="countdown">
+  <div class="box"><span id="d">00</span><p>DAYS</p></div>
+  <div class="box"><span id="h">00</span><p>HOURS</p></div>
+  <div class="box"><span id="m">00</span><p>MINS</p></div>
+  <div class="box"><span id="s">00</span><p>SECS</p></div>
+</div>
+
+<div class="name-box">
+  <input type="text" id="username" placeholder="Enter your name 💖">
+</div>
+
+<button onclick="reveal()">Reveal the Wish ✨</button>
+
+<main class="content">
+
+  <section class="message-section" id="messageSection">
+<div class="message" id="msg">
+  <h2 id="greet"></h2>
+  May this year bring you <b>peace in your heart</b>,  
+  strength on tough days, and  
+  small wins that feel BIG ✨  
+  <br><br>
+  May your worries get tired of you,  
+  your smile show up more often,  
+  and your chai always be at the perfect temperature ☕😄  
+  <br><br>
+  Here’s to growth, laughter, healing,  
+  and becoming just a little more unstoppable 💫
+</div>
+</section>
+
+</main>
+<div class="teddy left">🧸</div>
+<div class="teddy right">🧸</div>
+
+<footer class="footer">
+  Made with 💖 by <strong>Urfa</strong>
+</footer>
+<script>
+// Freeze countdown permanently
+d.innerText = "00";
+h.innerText = "00";
+m.innerText = "00";
+s.innerText = "00";
+
+// Start effects once
+function startEffects() {
+  setInterval(() => {
+    // 💗 Hearts
+    const heart = document.createElement("div");
+    heart.className = "heart";
+    heart.innerHTML = "💗";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = Math.random() * 16 + 14 + "px";
+    document.body.appendChild(heart);
+    setTimeout(() => heart.remove(), 6000);
+  }, 400);
+
+  setInterval(() => {
+    // 🎆 Fireworks
+    const fire = document.createElement("div");
+    fire.className = "firework";
+    fire.style.left = Math.random() * 100 + "vw";
+    fire.style.top = Math.random() * 100 + "vh";
+    fire.style.background =
+      ["gold", "deeppink", "red", "white"][Math.floor(Math.random() * 4)];
+    document.body.appendChild(fire);
+    setTimeout(() => fire.remove(), 1200);
+  }, 600);
+}
+
+
+// Auto-start fireworks
+startEffects();
+
+function reveal() {
+  const name =
+    document.getElementById("username").value || "Beautiful Soul";
+  document.getElementById("greet").innerText =
+    `Happy New Year, ${name} 💖`;
+
+  msg.style.display = "block";
+  music.play();
+}
+</script>
+
+
+
+
+</body>
+</html>
